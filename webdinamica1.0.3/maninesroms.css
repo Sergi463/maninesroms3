@@ -1,0 +1,109 @@
+html {
+    font-family: Arial, Helvetica, sans-serif;
+}/*definimos la fuente*/
+
+.menu{
+width: 90%;
+background-color: #333333;
+margin:auto;
+padding-top: 0px;
+color: floralwhite;
+align-items: center;
+}/*se define el menú superior, con sus colores y márgenes*/
+
+.logo{
+    width:10%;
+    height: 10%;
+    min-width:90px;
+} /*el tamaño del logo de la parte superior no bajará de 90 píxeles (que ya es pequeño)*/
+
+
+
+
+img {
+    height: 80%;
+
+    object-fit: fill;
+    display: block;
+    margin: auto;
+    width: 50%;
+    }/*se adaptan las imágenes a los contenedores creados*/
+
+    nav li{
+        display:inline-block;
+        width:10%;
+        padding:10px 12px;
+        background-color:#000;
+        border:none;
+        text-align:center;
+        color:floralwhite;
+    }
+
+    nav li:hover{/*al pasar el cursor encima de los botones estos cambian de color*/
+        background-color:#6231a3;
+        color:floralwhite;
+    }
+
+@media screen { /*todo lo de dentro de este media screen se ejecutará solo en la versión de pantalla grande*/
+    .menu{
+        text-align:center;
+    }
+
+    nav a{
+            text-decoration:none;
+            color:inherit;
+            font-size:200%;
+        } /*definimos un tamaño del texto de los botones distinto en pantallas grandes y pequeñas*/
+
+        .juegos {
+            display: grid;
+            background-color:#666666;
+            grid-template-columns: auto auto auto; /*con estos 3 autos hacemos que se coloque el grid con 3 columnas, que al reducir la pantalla se reducen proporcionalmente*/       
+        }
+            
+        .titulo{
+            text-align: left;
+        }/*el título de sección se muestra a la izquierda en pantalla grande*/
+}
+
+@media screen and (max-width: 800px) {/*pantallas pequeñas*/
+    .menu{
+        width:100%;
+        max-width: 720px;
+    }/*el menú pasa a ocupar toda la parte superior de la pantalla como la mayoria de webs en versión móvil*/
+
+    .juegos {
+        display: grid;
+        background-color:#666666;
+        grid-template-columns: auto; /*los juegos pasan a mostrarse de 1 en 1*/
+    }
+
+    nav a{
+        text-decoration:none;
+        color:inherit;
+        font-size:150%;
+        } 
+
+    .titulo{
+        text-align: center;
+    }/*en pantallas pequeñas los titulos se centran*/
+}
+.juegos div {
+    text-align: center;/*el texto con el nombre del juego se mostrará centrado debajo de la imagen*/
+}
+
+
+.titulo{
+    background-color: #333333;
+    margin-left: 5%;
+    margin-right: 5%;
+    color:floralwhite;
+}/*parametros de los titulos de secciones titulo*/
+
+.final{
+    background-color: #333333;
+    margin-left: 5%;
+    margin-right: 5%;
+    color:floralwhite;  
+    text-align: center;
+}/*el footer tiene el mismo format que los títulos, pero SIEMPRE se muestra centrado*/
